@@ -23,7 +23,8 @@ public class Exercicio_03 {
 		
 		System.out.printf("Salário liquído é: %.2f", salarioLiquido);
 		
-
+		leitor.close();
+		
 	}
 
 }

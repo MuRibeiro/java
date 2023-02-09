@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Exercicio_04 {
 
-	public static void main(String[] args) {
+	static Scanner leitor = new Scanner(System.in);
 	
-	Scanner leitor = new Scanner(System.in);
+	public static void main(String[] args) {
 	
 		float num1, num2, num3, num4, diferenca;
 		
