@@ -6,24 +6,24 @@ public class Exercicio_03 {
 
 	public static void main(String[] args) {
 		
-		Scanner leitor = new Scanner(System.in);
+		Scanner leia = new Scanner(System.in);
 		
 		float salarioBruto, addNoturno, horasExtras, descontos, salarioLiquido;
 		
 		System.out.println("Informe o salario bruto:");
-		salarioBruto = leitor.nextFloat();
+		salarioBruto = leia.nextFloat();
 		System.out.println("Informe o adicional noturno:");
-		addNoturno = leitor.nextFloat();
+		addNoturno = leia.nextFloat();
 		System.out.println("Informe quantidade de horas extras:");
-		horasExtras = leitor.nextFloat();
+		horasExtras = leia.nextFloat();
 		System.out.println("Informe os descontos:");
-		descontos = leitor.nextFloat();
+		descontos = leia.nextFloat();
 		
 		salarioLiquido = salarioBruto + addNoturno + (horasExtras * 5) - descontos;
 		
 		System.out.printf("Salário liquído é: %.2f", salarioLiquido);
 		
-		leitor.close();
+		leia.close();
 		
 	}
 

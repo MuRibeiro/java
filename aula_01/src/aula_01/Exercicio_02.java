@@ -6,7 +6,7 @@ public class Exercicio_02 {
 
 	public static void main(String[] args) {
 	
-	Scanner leitor = new Scanner(System.in);
+	Scanner leia = new Scanner(System.in);
 	
 		float nota1;
 		float nota2;
@@ -15,17 +15,19 @@ public class Exercicio_02 {
 		float mediaFinal;
 		
 		System.out.println("Informe a nota 1:");
-		nota1 = leitor.nextFloat();
+		nota1 = leia.nextFloat();
 		System.out.println("Informe a nota 2:");
-		nota2 = leitor.nextFloat();
+		nota2 = leia.nextFloat();
 		System.out.println("Informe a nota 3:");
-		nota3 = leitor.nextFloat();
+		nota3 = leia.nextFloat();
 		System.out.println("Informe a nota 4:");
-		nota4 = leitor.nextFloat();
+		nota4 = leia.nextFloat();
 
 		mediaFinal = (nota1 + nota2 + nota3 + nota4)/4;
 		
 		System.out.printf("Média final: %.1f", mediaFinal);
+		
+		leia.close();
 	}
 
 }

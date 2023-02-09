@@ -23,7 +23,8 @@ public class Exercicio_01 {
 		novoSalario = salario + abono;
 		
 		System.out.printf("Novo salário do funcionário " + nome + " é: R$%.2f ", novoSalario );
-		
+	
+		leitor.close();
 	}
 
 }
