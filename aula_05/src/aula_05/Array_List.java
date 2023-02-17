@@ -9,8 +9,7 @@ public class Array_List {
 		
 		Scanner leia = new Scanner(System.in);
 		
-		ArrayList <Double> notas = new ArrayList<Double>();
-		
+		ArrayList<Double> notas = new ArrayList<Double>();
 		
 		int opcao = 0;
 		double nota = 0.0;
