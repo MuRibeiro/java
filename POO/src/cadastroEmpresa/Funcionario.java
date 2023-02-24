@@ -6,14 +6,14 @@ public class Funcionario {
 	private int matricula;
 	private int celular;
 	private String funcao;
-	private String turno;
+	private float salario;
 	
-	public Funcionario(String nome, int matricula, int celular, String funcao, String turno) {
+	public Funcionario(String nome, int matricula, int celular, String funcao, float salario) {
 		this.nome = nome;
 		this.matricula = matricula;
 		this.celular = celular;
 		this.funcao = funcao;
-		this.turno = turno;
+		this.salario = salario;
 	}
 
 	public String getNome() {
@@ -48,12 +48,12 @@ public class Funcionario {
 		this.funcao = funcao;
 	}
 
-	public String getTurno() {
-		return turno;
+	public float getSalario() {
+		return salario;
 	}
 
-	public void setTurno(String turno) {
-		this.turno = turno;
+	public void setTurno(float salario) {
+		this.salario = salario;
 	}
 	
 	public void visualizar() {
@@ -66,7 +66,7 @@ public class Funcionario {
 		System.out.println("         - Matricula: " + this.matricula);
 		System.out.println("         - Celular: " + this.celular);
 		System.out.println("         - Função: " + this.funcao);
-		System.out.println("         - Turno: " + this.turno + "\n\n");
+		System.out.println("         - Salario: R$" + this.salario);
 		
 	}
 	

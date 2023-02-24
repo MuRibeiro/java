@@ -12,8 +12,9 @@ public class TestaFarmacia {
 		Scanner leia = new Scanner(System.in);
 		
 		long id;
-		String nome, nomeComercial, fabricante, foto, opcao;
+		String nome, nomeComercial, fabricante, foto, opcao, principioAtivo, fragancia;
 		float preco;
+		int tipo;
 		
 		do {
 			
@@ -36,8 +37,31 @@ public class TestaFarmacia {
 		System.out.println("Preço: " );
 		preco = leia.nextFloat();
 		
-		Farmacia f1 = new Farmacia(id, nome, nomeComercial, fabricante, foto, preco);
-		medicamentos.add(f1);
+		System.out.println("Tipo: " );
+		tipo = leia.nextInt();
+		
+		switch(tipo) {
+		
+			case 1 -> {
+				System.out.println("Principio ativo: " );
+				leia.skip("\\R?");
+				principioAtivo = leia.nextLine();
+				
+				Medicamento m1 = new Medicamento(id, nome, nomeComercial, fabricante, foto, preco, tipo, principioAtivo);
+				
+				medicamentos.add(m1);
+			}
+			
+			case 2 -> {
+				System.out.println("Fragância: " );
+				leia.skip("\\R?");
+				fragancia = leia.nextLine();
+				
+				Perfumaria p1 = new Perfumaria(id, nome, nomeComercial, fabricante, foto, preco, tipo, fragancia);
+				
+				medicamentos.add(p1);
+			}
+		}
 		
 		System.out.println("Deseja continuar?");
 		leia.skip("\\R?");
@@ -45,14 +69,10 @@ public class TestaFarmacia {
 		
 		}while(opcao.equalsIgnoreCase("S"));
 		
-		for(var medicamento : medicamentos)
+		for(var medicamento : medicamentos) {
+			medicamento.reajuste(0.010f);
 			medicamento.visualizar();
-		
-		//Farmacia f2 = new Farmacia(1, "Paracetamol", "Tylenol", "Neo Quimica", "--", 20.0f);
-		
-		//f1.visualizar();
-		
-		//f2.visualizar();
+		}
 		
 		leia.close();
 		

@@ -6,9 +6,9 @@ public class Cliente {
 	private int idade;
 	private String sexo;
 	private int rg;
-	private int telefone;
+	private String telefone;
 	
-	public Cliente(String nome, int idade, String sexo, int rg, int telefone) {
+	public Cliente(String nome, int idade, String sexo, int rg, String telefone) {
 		
 		this.nome = nome;
 		this.idade = idade;
@@ -49,23 +49,24 @@ public class Cliente {
 		this.rg = rg;
 	}
 
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void seTelefone(int telefone) {
+	public void seTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 	
 	public void visualizar() {
 		
-		System.out.println("          DADOS DO CLIENTE               ");
-		System.out.println("                                         ");
+		System.out.println(".........................................");
+		System.out.println(".         DADOS DO CLIENTE              .");
+		System.out.println(".........................................");
 		System.out.println("Nome do cliente: " + this.nome);
 		System.out.println("Idade do cliente: " + this.idade);
 		System.out.println("Sexo do cliente: " + this.sexo);
 		System.out.println("RG do cliente: " + this.rg);
-		System.out.println("Telefone do cliente: " + this.telefone + "\n\n");
+		System.out.println("Telefone do cliente: " + this.telefone);
 		
 	}
 
